@@ -1,0 +1,22 @@
+<div class="login-page">
+  <div class="form">
+    <form class="login-form">
+      <input id="user" type="text" placeholder="username"/>
+      <input id="password" type="password" placeholder="password"/>
+      <button id="subLogin">login</button>
+    </form>
+    <script>
+        $('#subLogin').click(function(event) {
+            event.preventDefault();
+            if ($('#user').val() === '1' && $('#password').val() === '1') {
+                alert('Usuário Logado com sucesso!');
+                setTimeout(function() {
+                    location.href = '/home';
+                }, 500)                
+            } else {
+                alert('Usuário ou senha incorretos!');
+            }
+        });
+    </script>
+  </div>
+</div>
